@@ -44,21 +44,18 @@ function makeTheCalls(){
 	connection.query('SELECT * FROM telephones', function(err, data){
 
 	for(var x = 0; x < data.length; x += 1){
-		
-		(function(x){
 
-			console.log(data[x].phonenumber);
+		console.log(data[x].phonenumber);
 
-			client.calls.create({
-				url: "YOUR TWILIO XML",
-				to: data[x].phonenumber,
-				from: "YOUR TWILIO PHONE NUMBER",
-				timeout: 30
-			}, function(err, call) {
-					console.log(call.sid);
-			});	
+		client.calls.create({
+			url: "YOUR TWILIO XML",
+			to: data[x].phonenumber,
+			from: "YOUR TWILIO PHONE NUMBER",
+			timeout: 30
+		}, function(err, call) {
+				console.log(call.sid);
+		});	
 
-		})(x);
 
 	}
 
