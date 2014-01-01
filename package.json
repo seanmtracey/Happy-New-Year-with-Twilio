@@ -1,0 +1,11 @@
+{
+  "name": "HNY ",
+  "description": "Quick Twilio Server to Call all the phones in Luton",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.3.3",
+    "twilio" : "*",
+    "node-mysql" : "*"
+  }
+}
